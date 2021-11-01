@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<VBox fx:controller="ru.gb.MainController"
+      prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1">
+    <MenuBar VBox.vgrow="NEVER">
+        <menus>
+            <Menu mnemonicParsing="false" text="File" style="-fx-font-family: monospace;">
+                <items>
+                    <MenuItem mnemonicParsing="false" text="Quit"/>
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit" style="-fx-font-family: monospace;">
+                <items>
+                    <MenuItem mnemonicParsing="false" text="Cut"/>
+                    <MenuItem mnemonicParsing="false" text="Copy"/>
+                    <MenuItem mnemonicParsing="false" text="Paste"/>
+                    <MenuItem mnemonicParsing="false" text="Delete"/>
+                    <MenuItem mnemonicParsing="false" text="Rename"/>
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help" style="-fx-font-family: monospace;">
+                <items>
+                    <MenuItem mnemonicParsing="false" text="About App"/>
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+        <ListView fx:id="clientView" layoutX="14.0" layoutY="36.0" prefHeight="280.0" prefWidth="270.0"
+                  style="-fx-font-family: monospace;"/>
+        <ListView fx:id="serverView" layoutX="356.0" layoutY="36.0" prefHeight="280.0" prefWidth="270.0"
+                  style="-fx-font-family: monospace;"/>
+        <Button layoutX="293.0" layoutY="121.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0"
+                style="-fx-font-family: monospace;" text="&gt;"/>
+        <Button layoutX="293.0" layoutY="186.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0"
+                style="-fx-font-family: monospace;" text="&lt;"/>
+        <TextField fx:id="input" onAction="#sendMessage" layoutX="15.0" layoutY="330.0" prefHeight="27.0"
+                   prefWidth="612.0" style="-fx-font-family: monospace;"/>
+        <TextField layoutX="15.0" layoutY="10.0" prefHeight="27.0" prefWidth="229.0"
+                   style="-fx-font-family: monospace;"/>
+        <Button layoutX="585.0" layoutY="10.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="28.0"
+                style="-fx-font-family: monospace;" text="..."/>
+        <TextField layoutX="356.0" layoutY="10.0" prefHeight="27.0" prefWidth="229.0"
+                   style="-fx-font-family: monospace;"/>
+        <Button layoutX="244.0" layoutY="10.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="28.0"
+                style="-fx-font-family: monospace;" text="..."/>
+    </AnchorPane>
+</VBox>
