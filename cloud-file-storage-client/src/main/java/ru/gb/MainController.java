@@ -79,9 +79,22 @@ public class MainController implements Initializable {
 
     public void sendMessage(ActionEvent actionEvent) throws IOException {
         String text = input.getText();
-        os.writeUTF(text);
+//        os.writeUTF(text);
+        os.write(getFileObject(text));
         os.flush();
         input.clear();
-        //Todo 28.10.2021 send file to the server
     }
+
+    private byte[] getFileObject(String fileName) throws IOException {
+        FileObject file = new FileObject(
+                fileName, new File(String.valueOf(Paths.get(String.valueOf(clientDir), fileName)))
+        );
+        ByteArrayOutputStream bos = new ByteArrayOutputStream();
+        ObjectOutput outputObj = new ObjectOutputStream(bos);
+        outputObj.writeObject(file);
+        outputObj.flush();
+        outputObj.close();
+        return bos.toByteArray();
+    }
+
 }
