@@ -1,0 +1,8 @@
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NN                                                                     NN
+NN                   Welcome to the Shell build by                     NN
+NN                        @Romans Gainanovs                            NN
+NN                 Student of GeekBrains University                    NN
+NN                                                                     NN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+
